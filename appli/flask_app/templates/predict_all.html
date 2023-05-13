@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    db_save
+{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+        <div id="intro" class="row justify-content-center p-5">
+            <div class="col-xl-5 col-md-8 p-5">
+                <h1 class="p-2 text-warning backcolor rounded-3 text-center">Predict All</h1>
+                <form class="backcolor rounded-5 shadow-5-strong p-5" action="{{ url_for('predict_all_post') }}" method="post" >
+                    <!-- Form input -->
+                    <div class="form-outline mb-4">
+                    <label class="form-label text-danger" for="form1Example1">Name</label>
+                    <input type="text" id="form1Example1" class="form-control" name="Name" />
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-warning" for="form1Example1">Location</label>
+                    <input type="text" id="form1Example1" class="form-control" name="Location"/>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-success" for="form1Example1">Year</label>
+                    <input type="text" id="form1Example1" class="form-control" name="Year" />
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-danger" for="form1Example1">Kilometers_Driven</label>
+                    <input type="text" id="form1Example1" class="form-control" name="Kilometers_Driven"/>
+
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-warning" for="form1Example1">Owner_Type</label>
+                    <input type="text" id="form1Example1" class="form-control" name="Owner_Type"/>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-success" for="form1Example1">Fuel_Type</label>
+                    <input type="text" id="form1Example1" class="form-control" name="Fuel_Type"/>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-danger" for="form1Example1">Transmission</label>
+                    <input type="text" id="form1Example1" class="form-control" name="Transmission"/>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-warning" for="form1Example1">Mileage</label>
+                    <input type="text" id="form1Example1" class="form-control" name="Mileage"/>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-success" for="form1Example1">Engine</label>
+                    <input type="text" id="form1Example1" class="form-control" name="Engine"/>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-danger" for="form1Example1">Power</label>
+                    <input type="text" id="form1Example1" class="form-control" name="Power"/>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-warning" for="form1Example1">Seats</label>
+                    <input type="text" id="form1Example1" class="form-control" name="Seats"/>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-success" for="form1Example1">New_Price</label>
+                    <input type="text" id="form1Example1" class="form-control" name="New_Price"/>
+                </div>
+
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block" name="save">Sauvegarder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+    </div>
+
+
+
+
+{% endblock %}

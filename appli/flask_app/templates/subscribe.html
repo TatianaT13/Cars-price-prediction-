@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    SubscriptionPage
+{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+        <div id="intro" class="row justify-content-center p-5">
+            <div class="col-xl-5 col-md-8 p-5">
+                <h1 class="p-2 text-warning backcolor rounded-3 text-center">Formulaire de connexion</h1>
+                <form class="backcolor  rounded-5 shadow-5-strong p-5" action="{{ url_for('subscribe_post') }}" method="post" >
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label text-danger" for="form1Example1">Nom d'Utilisateur</label>
+                        <input type="text" id="form1Example1" class="form-control" name="username" />
+
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label text-warning" for="form1Example2">Password</label>
+                        <input type="password" id="form1Example2" class="form-control" name="password" />
+
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label text-success" for="form1Example2">Retapez votre Password</label>
+                        <input type="password" id="form1Example2" class="form-control" name="password" />
+                    </div>
+
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-block" name="subscribe" > Inscription</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>{% block title %}{% endblock %} - Rent Car</title>
+</head>
+<body>
+    <header class="container-fluid col-12 bg-black">
+        <div class="row">
+            <h1 class="col-10 offset-1 text-center p-4 ">
+                Rent Car Predict
+            </h1>
+        </div>
+        {# nav bar principal #}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark row">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#"><i class="fa-2x fa-solid fa-car-burst text-secondary"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                  <ul class="navbar-nav me-auto">
+                    <div class="dropdown text-danger">
+                        <div class="nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-danger">Connect</div>
+                        </div>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item text-danger" href="{{ url_for("login") }}">Connexion</a>
+                            <a class="dropdown-item text-warning" href="{{ url_for("subscribe") }}">Inscription</a>
+                            <a class="dropdown-item text-success" href="#">Déconnexion</a>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                      <a class="nav-link " href="{{ url_for("analysis")}}"> <div class="text-warning"> Analysis </div></a>
+                    </li>
+                    <div class="dropdown">
+                        <div class="nav-link " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-success">Predict</div>
+                        </div>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="{{ url_for("predict_all") }}">Predict All</a>
+                            <a class="dropdown-item" href="{{ url_for("predict_lite") }}">Predict Lite</a>
+                        </div>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+    </header>
+
+
+
+    {# backgroung-image #}
+    <div>
+            {# Bloc pour afficher le contenu des pages #}
+            {% block body %} {% endblock %}
+    </div>
+
+    <footer class="bg-black p-0">
+        {# nav bar footer #}
+        <nav class="navbar navbar-expand-lg navbar-light p-3 ">
+            <div class="container-fluid justify-content-center col-8 offset-3">
+
+                <a class="navbar-brand text-secondary" href="#"><i class="fa-2x fa-solid fa-car-burst text-secondary"></i>Contact </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFootDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarFootDropdown">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#"> <i class="fa-2x fa-solid fa-car-burst text-danger"></i> Visitez notre discord </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> <i class="fa-2x fa-solid fa-car-burst text-warning"></i> Twitter avec nous </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> <i class="fa-2x fa-solid fa-car-burst text-success"></i> Suivez nous sur Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div>
+            <a class="text-secondary text-center no-gutter nav-link" href="#" >protégé par copyrigth © Rent_Car_Predict TNL </a>
+        </div>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../static/script.js" ></script>
+</body>
+</html>
+

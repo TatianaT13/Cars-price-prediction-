@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Predict Lite
+{% endblock %}
+
+{% block body %}
+
+
+    <div class="container-fluid">
+        <div id="intro" class="row justify-content-center p-5">
+            <div class="col-xl-5 col-md-8 p-5">
+                <h1 class="p-2 text-warning backcolor rounded-3 text-center">Predict Lite</h1>
+                <form class="backcolor rounded-5 shadow-5-strong p-5" action="{{ url_for('predict_lite_post') }}" method="post" >
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label text-danger" for="form1Example1">Year</label>
+                        <input type="text" id="form1Example1" class="form-control" name="Year" />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label text-warning" for="form1Example1">Engine</label>
+                        <input type="text" id="form1Example1" class="form-control" name="Engine"/>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label text-success" for="form1Example1">Power</label>
+                        <input type="text" id="form1Example1" class="form-control" name="Power" />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label text-white" for="form1Example1">New_Price</label>
+                        <input type="text" id="form1Example1" class="form-control" name="New_Price"/>
+                    </div>
+
+
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-block" name="save">Sauvegarder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
